@@ -5,13 +5,13 @@
 	<c:forEach var="i" items="${list}">
 		<li class="layui-nav-item layui-nav-itemed">
 		<c:if test="${i.type == 1}">
-				<a class="" href="javascript:;">${i.qname}</a>
+				<a class="" href="javascript:;">${i.qxname}</a>
 				<dl class="layui-nav-child">
 					<c:forEach var="n" items="${list}">
-						<c:if test="${n.fid == i.id}">
+						<c:if test="${n.fatherid == i.id}">
 							<dd>
 								<a href="javascript:;" id="aa"
-									onclick="notempty('${n.id}','${n.url}','${n.js}')">${n.qname}</a>
+									onclick="notempty('${n.id}','${n.url}','${n.function}')">${n.qxname}</a>
 							</dd>
 						</c:if>
 					</c:forEach>
